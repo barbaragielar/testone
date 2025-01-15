@@ -51,6 +51,55 @@
             color: #fff;
             margin-top: 20px;
         }
+        .wind-turbine {
+            position: relative;
+            margin: 20px auto;
+            width: 100px;
+            height: 150px;
+        }
+        .tower {
+            position: absolute;
+            bottom: 0;
+            width: 10px;
+            height: 100px;
+            background: #888;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .blades {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            height: 0;
+            transform: translateX(-50%) rotate(0deg);
+            animation: spin 2s linear infinite;
+        }
+        .blade {
+            position: absolute;
+            width: 60px;
+            height: 10px;
+            background: #666;
+            top: -5px;
+            left: -30px;
+        }
+        .blade:nth-child(1) {
+            transform: rotate(0deg);
+        }
+        .blade:nth-child(2) {
+            transform: rotate(120deg);
+        }
+        .blade:nth-child(3) {
+            transform: rotate(240deg);
+        }
+        @keyframes spin {
+            from {
+                transform: translateX(-50%) rotate(0deg);
+            }
+            to {
+                transform: translateX(-50%) rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -92,6 +141,18 @@
        oraz zapewnieniu bezpieczeństwa energetycznego.</p>
     <p>Wraz z rozwojem technologii i spadkiem kosztów budowy turbin wiatrowych, farmy wiatrowe stają się coraz 
        bardziej dostępne dla wielu krajów i regionów na świecie.</p>
+</section>
+
+<section id="wiatraki">
+    <h2>Animacja turbin wiatrowych</h2>
+    <div class="wind-turbine">
+        <div class="tower"></div>
+        <div class="blades">
+            <div class="blade"></div>
+            <div class="blade"></div>
+            <div class="blade"></div>
+        </div>
+    </div>
 </section>
 
 <footer>
